@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* custom properties */
+
+:root {
+
+    --h1-fs: 2rem;
+    --label-fs: 1.5rem;
+    --option-fs: 1rem;
+    --button-fs: 1.6rem;
+    /* margins */
+    --margin-top: 1.5rem;
+
+    /* others */
+    --input-width: 100%;
+    --input-height: 2em;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+h1 {
+    font-size: var(--h1-fs); 
+    text-align: center;
+    padding-top: 1em; 
+    /* Using em for padding-top will allow the padding to scale with the font-size of the heading */
+}
+
+label {font-size: var(--label-fs);}
+
+input {
+    width: var(--input-width);
+    height: var(--input-height);
+}
+
+select {
+    width: var(--input-width);
+    height: var(--input-height);
+    margin-bottom: 1em;
+}
+
+option {font-size: var(--option-fs);}
+
+
+input[type="button"] {
+    margin-top: 1em;
+    font-size: var(--button-fs);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--input-width);
+}
+
+.form-container {
+    margin-top: var(--margin-top);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0 1em 0 1em; /*top right bottom left*/
+}

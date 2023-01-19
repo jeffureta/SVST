@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Vital Signs Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Simple Vital Signs Tracker</h1>
+        <form class="form-container">
+            <label for="heart-rate">Heart Rate</label>
+            <input type="number" id="heart-rate" class="vital-signs" data-threshold-max="90">
+            <br>
+            <label for="respiration-rate">Respiration Rate</label>
+            <input type="number" id="respiration-rate" class="vital-signs" data-threshold-max="20">
+            <br>
+            <label for="temperature">Temperature</label>
+            <input type="number" id="temperature" class="vital-signs" data-threshold-max="38">
+            <br>
+            <label for="blood-pressure">Blood Pressure</label>
+            <input type="number" id="blood-pressure" class="vital-signs" data-threshold-min="80"
+                data-threshold-max="140">
+            <br>
+            <label for="oxygen-saturation">Oxygen Saturation</label>
+            <input type="number" id="oxygen-saturation" class="vital-signs" data-threshold-min="92">
+            <br>
+            <label for="level-of-consciousness">Level of Consciousness</label>
+            <select id="level-of-consciousness" name="level-of-consciousness" class="vital-signs">
+                <option value="" selected disabled hidden></option>
+                <option value="alert">Alert</option>
+                <option value="drowsy">Drowsy</option>
+                <option value="confused">Confused</option>
+                <option value="unresponsive">Unresponsive</option>
+            </select>
+            <br>
+            <input type="button" value="Calculate Score" id="calculate-button">
+
+        </form>
+        <p id="score"></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
